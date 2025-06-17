@@ -11,7 +11,7 @@ export const NavigationSection = (): JSX.Element => {
 
   return (
     <header
-      className="flex w-full h-[88px] items-center justify-between px-6 py-5 bg-[#0000001a] backdrop-blur-[2px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(2px)_brightness(100%)] right-auto bottom-auto absolute left-auto top-auto sticky top-auto right-auto bottom-auto left-auto"
+      className="flex w-full h-[88px] items-center justify-between px-6 py-5 bg-[#0000001a] backdrop-blur-[2px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(2px)_brightness(100%)] absolute top-0 left-0 z-50"
       data-oid="2z4a_e8"
     >
       <div className="flex items-center justify-center" data-oid="es.88bq">
