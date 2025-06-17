@@ -8,12 +8,13 @@ export const HeroSection = (): JSX.Element => {
       data-oid="w02g.x9"
     >
       <div
-        className="flex justify-between items-center max-w-7xl bg-[#ffcbcd] rounded-[30px] overflow-hidden w-[1352px]"
+        className="flex items-center bg-[#ffcbcd] rounded-[30px] overflow-hidden w-full justify-center"
         data-oid="3ni4te3"
       >
         <div
-          className="flex flex-col p-12 space-y-8 max-w-2xl"
+          className="flex flex-col p-12 space-y-8 max-w-3xl"
           data-oid="_iinrs0"
+          key="olk-a3eQ"
         >
           <h1
             className="font-extrabold text-[#736f6f] text-7xl md:text-8xl leading-tight"
@@ -40,10 +41,10 @@ export const HeroSection = (): JSX.Element => {
             </Button>
           </div>
         </div>
-
         <div
-          className="hidden md:block h-[561px] w-[430px] bg-[url(../../../../images/foto.png)] bg-cover bg-center"
+          className="hidden md:block w-[430px] bg-[url(../../../../images/foto.png)] bg-cover bg-center h-[585px]"
           data-oid="3hvdw.:"
+          key="olk-oVqW"
         />
       </div>
     </section>
