@@ -3,11 +3,11 @@ import { Button } from "../../../../components/ui/button";
 import { useIsMobile } from "../../../../lib/hooks/useIsMobile";
 import { BlurImage } from "../../../../components/ui/blur-image";
 
-// Importamos las imágenes y sus versiones de baja resolución
-import heroImage from "../../../../images/foto.png";
-import heroImageMobile from "../../../../images/foto-mobile.png";
-import heroImagePlaceholder from "../../../../images/foto-placeholder.png";
-import heroImageMobilePlaceholder from "../../../../images/foto-mobile-placeholder.png";
+// Rutas a las imágenes
+const heroImage = "/images/foto.png";
+const heroImageMobile = "/images/foto-mobile.png";
+const heroImagePlaceholder = "/images/foto-placeholder.png";
+const heroImageMobilePlaceholder = "/images/foto-mobile-placeholder.png";
 
 export const HeroSection = (): JSX.Element => {
   const isMobile = useIsMobile();

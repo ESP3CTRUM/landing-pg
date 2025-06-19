@@ -59,7 +59,7 @@ export const NavigationSection = (): JSX.Element => {
         <img
           className="w-[128.93px] h-16"
           alt="Logo"
-          src="../../../../images/svg-logo.svg"
+          src="/images/svg-logo.svg"
         />
       </div>
       
