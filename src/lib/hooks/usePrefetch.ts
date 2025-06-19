@@ -4,7 +4,7 @@ export const usePrefetch = () => {
   useEffect(() => {
     const prefetchSection = (sectionPath: string) => {
       // Importamos dinámicamente la sección
-      import(`../../screens/LandingPage/sections/${sectionPath}`).catch(() => {
+      import(`../../screens/LandingPage/sections/${sectionPath}.tsx`).catch(() => {
         // Silenciosamente fallamos si hay error
         console.debug(`Prefetch failed for ${sectionPath}`);
       });
