@@ -4,39 +4,41 @@ import { HeroSection } from "./sections/HeroSection";
 import { MainContentSection } from "./sections/MainContentSection/MainContentSection";
 import { NavigationSection } from "./sections/NavigationSection";
 import { ServicesOfferedSection } from "./sections/ServicesOfferedSection";
+import { Terapeutas } from "./sections/Terapeutas/Terapeutas";
 
 export const LandingPage = (): JSX.Element => {
   return (
     <div
       className="flex flex-col w-full items-center bg-background"
-      data-oid="e0wexhp"
+      data-oid="mtr39e6"
     >
-      <NavigationSection data-oid="w:dj8jz" />
-      <HeroSection data-oid="2ma0jwp" />
-      <AnxietyInfoSection data-oid="3.uqfst" />
-      <ServicesOfferedSection data-oid="bcxizn_" />
+      <NavigationSection data-oid="m-4tlhp" />
+      <HeroSection data-oid="58k64p8" />
+      <AnxietyInfoSection data-oid="7j2v-re" />
+      <ServicesOfferedSection data-oid="nskgfm4" />
+      
 
-      <section className="w-full py-12" data-oid="lny6lth">
-        <div className="container mx-auto" data-oid="ccayfo3">
+      <section className="w-full py-12" data-oid="gw2e7-4">
+        <div className="container mx-auto" data-oid="xb6cd5q">
           <h2
             className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center font-semibold text-[#373434] mb-12"
-            data-oid="hekjxei"
+            data-oid="cpb5rtu"
           >
             Opiniones De Personas Como Tú
           </h2>
         </div>
       </section>
 
-      <MainContentSection data-oid="l_rvp2i" />
-
+      <MainContentSection data-oid="qwp0jf0" />
+      <Terapeutas />
       <footer
         className="w-full py-9 bg-[#333333] text-white"
-        data-oid="ydn:w1a"
+        data-oid="ebaopr9"
       >
-        <div className="container mx-auto text-center" data-oid="ig_g7yz">
+        <div className="container mx-auto text-center" data-oid="vk1.kcj">
           <p
             className="font-normal text-base leading-relaxed"
-            data-oid="72jr4ib"
+            data-oid="4g_8ca."
           >
             © 2023 Terapia Online para Dominicanos en el Exterior
           </p>

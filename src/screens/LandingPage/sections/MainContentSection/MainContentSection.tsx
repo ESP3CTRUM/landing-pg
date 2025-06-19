@@ -29,62 +29,35 @@ export const MainContentSection = (): JSX.Element => {
   ];
 
   return (
-    <section
-      className="flex flex-wrap justify-center gap-[26px_15px] py-[26px] w-full"
-      data-oid="7-fhn83"
-    >
+    <section className="flex flex-wrap justify-center gap-[26px_15px] py-[26px] w-full">
       {cards.map((card) => (
         <Card
           key={card.id}
           className={`rounded-[20px] overflow-hidden ${card.className}`}
-          data-oid="eus7nb5"
         >
-          <CardContent
-            className="flex flex-col items-center justify-center gap-[50px] p-[23px]"
-            data-oid="i:r9-9o"
-          >
-            <CardHeader className="p-0 w-full" data-oid="gcbbht3">
-              <CardTitle
-                className="h-[69px] flex items-center justify-center [font-family:'Segoe_UI_Variable-SemiboldSmall',Helvetica] font-normal text-6xl text-center tracking-[0] leading-[75px]"
-                data-oid="gh3jrd8"
-              >
+          <CardContent className="flex flex-col items-center justify-center gap-[50px] p-[23px]">
+            <CardHeader className="p-0 w-full">
+              <CardTitle className="h-[69px] flex items-center justify-center [font-family:'Segoe_UI_Variable-SemiboldSmall',Helvetica] font-normal text-6xl text-center tracking-[0] leading-[75px]">
                 {therapyPlanData.title}
               </CardTitle>
             </CardHeader>
 
-            <div
-              className="inline-flex items-end justify-center"
-              data-oid=":8c0r8_"
-            >
-              <div
-                className="w-[614px] [font-family:'Segoe_UI_Variable-Regular',Helvetica] font-normal text-black text-[22px] tracking-[0] leading-[33px]"
-                data-oid="v67aakx"
-              >
+            <div className="inline-flex items-end justify-center">
+              <div className="w-[614px] [font-family:'Segoe_UI_Variable-Regular',Helvetica] font-normal text-black text-[22px] tracking-[0] leading-[33px]">
                 {therapyPlanData.services.map((service, index) => (
                   <React.Fragment key={index}>
                     {service}
-                    {index < therapyPlanData.services.length - 1 && (
-                      <br data-oid="qcko8_5" />
-                    )}
+                    {index < therapyPlanData.services.length - 1 && <br />}
                   </React.Fragment>
                 ))}
               </div>
             </div>
 
-            <div
-              className="flex items-center justify-center gap-0.5 px-[18px] w-full"
-              data-oid="519rduj"
-            >
-              <span
-                className="[font-family:'Segoe_UI-Semibold',Helvetica] font-normal text-black text-[80px] tracking-[0] leading-[75px]"
-                data-oid="1i.p9t5"
-              >
+            <div className="flex items-center justify-center gap-0.5 px-[18px] w-full">
+              <span className="[font-family:'Segoe_UI-Semibold',Helvetica] font-normal text-black text-[80px] tracking-[0] leading-[75px]">
                 $
               </span>
-              <span
-                className="[font-family:'Segoe_UI-Semibold',Helvetica] font-normal text-black text-[80px] tracking-[0] leading-[75px]"
-                data-oid="szvtcqd"
-              >
+              <span className="[font-family:'Segoe_UI-Semibold',Helvetica] font-normal text-black text-[80px] tracking-[0] leading-[75px]">
                 {therapyPlanData.price}
               </span>
             </div>
