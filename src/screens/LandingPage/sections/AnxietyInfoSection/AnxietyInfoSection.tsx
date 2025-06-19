@@ -3,6 +3,7 @@ import React from "react";
 export const AnxietyInfoSection = (): JSX.Element => {
   return (
     <section
+      id="anxiety-info"
       className="w-full bg-white py-8 px-6 md:px-8 lg:px-[30px]"
       data-oid="ys4jmlp"
     >

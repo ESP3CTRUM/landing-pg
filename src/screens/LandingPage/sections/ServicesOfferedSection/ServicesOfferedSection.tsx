@@ -12,7 +12,7 @@ export const ServicesOfferedSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex flex-col gap-[52px] px-9 py-[66px] bg-[#d0cece] w-full">
+    <section className="flex flex-col gap-[52px] px-9 py-[66px] bg-[#d0cece] w-full" id="solution-section">
       <header className="flex items-center justify-center">
         <h2 className="w-full max-w-[1036px] [font-family:'Segoe_UI_Variable-bold',Helvetica] font-normal text-[#393838] text-[80px] leading-[75px]">
           Supérala Mediante Nuestro Paquete De Terapia Contra La Ansiedad:

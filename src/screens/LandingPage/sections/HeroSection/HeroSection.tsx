@@ -3,6 +3,7 @@ import { Button } from "../../../../components/ui/button";
 export const HeroSection = (): JSX.Element => {
   return (
     <section
+      id="hero-section"
       className="w-full flex justify-center items-center p-[10px]"
       data-oid="b_5ac-g"
     >
