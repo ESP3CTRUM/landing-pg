@@ -1,44 +1,79 @@
-import React from "react";
-import { AnxietyInfoSection } from "./sections/AnxietyInfoSection/AnxietyInfoSection";
-import { HeroSection } from "./sections/HeroSection";
-import { MainContentSection } from "./sections/MainContentSection/MainContentSection";
+import React, { Suspense } from "react";
 import { NavigationSection } from "./sections/NavigationSection";
-import { ServicesOfferedSection } from "./sections/ServicesOfferedSection";
-import { Terapeutas } from "./sections/Terapeutas/Terapeutas";
+import { HeroSection } from "./sections/HeroSection";
+import { usePrefetch } from "../../lib/hooks/usePrefetch";
+
+// Lazy loading para las secciones que no son inmediatamente visibles
+const AnxietyInfoSection = React.lazy(() =>
+  import("./sections/AnxietyInfoSection/AnxietyInfoSection").then((module) => ({
+    default: module.AnxietyInfoSection,
+  }))
+);
+const MainContentSection = React.lazy(() =>
+  import("./sections/MainContentSection/MainContentSection").then((module) => ({
+    default: module.MainContentSection,
+  }))
+);
+const ServicesOfferedSection = React.lazy(() =>
+  import("./sections/ServicesOfferedSection").then((module) => ({
+    default: module.ServicesOfferedSection,
+  }))
+);
+const Terapeutas = React.lazy(() =>
+  import("./sections/Terapeutas/Terapeutas").then((module) => ({
+    default: module.Terapeutas,
+  }))
+);
+
+// Componente de carga
+const LoadingFallback = () => (
+  <div className="w-full h-[200px] flex items-center justify-center">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+  </div>
+);
 
 export const LandingPage = (): JSX.Element => {
-  return (
-    <div
-      className="flex flex-col w-full items-center bg-background"
-      data-oid="9_r_995"
-    >
-      <NavigationSection data-oid="h3w9nt_" />
-      <HeroSection data-oid="j20:fch" />
-      <AnxietyInfoSection data-oid="-s88_n3" />
-      <ServicesOfferedSection data-oid="br0la39" />
+  // Activar el prefetch
+  usePrefetch();
 
-      <section className="w-full py-12" data-oid="d7ijzgw">
-        <div className="container mx-auto" data-oid="uw-7tn5">
-          <h2
-            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center font-semibold text-[#373434] mb-12"
-            data-oid="dcwcvwa"
-          >
+  return (
+    <div className="flex flex-col w-full items-center bg-background">
+      <NavigationSection />
+      <HeroSection />
+
+      <Suspense fallback={<LoadingFallback />}>
+        <div data-prefetch="ServicesOfferedSection">
+          <AnxietyInfoSection />
+        </div>
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback />}>
+        <div data-prefetch="MainContentSection/MainContentSection">
+          <ServicesOfferedSection />
+        </div>
+      </Suspense>
+
+      <section className="w-full py-12">
+        <div className="container mx-auto">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center font-semibold text-[#373434] mb-12">
             Opiniones De Personas Como Tú
           </h2>
         </div>
       </section>
 
-      <MainContentSection data-oid="1_z:x56" />
-      <Terapeutas data-oid="zwg5wiq" />
-      <footer
-        className="w-full py-9 bg-[#333333] text-white"
-        data-oid="lce.qfr"
-      >
-        <div className="container mx-auto text-center" data-oid="wt.rn.4">
-          <p
-            className="font-normal text-base leading-relaxed"
-            data-oid="exzefzj"
-          >
+      <Suspense fallback={<LoadingFallback />}>
+        <div data-prefetch="Terapeutas/Terapeutas">
+          <MainContentSection />
+        </div>
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback />}>
+        <Terapeutas />
+      </Suspense>
+
+      <footer className="w-full py-9 bg-[#333333] text-white">
+        <div className="container mx-auto text-center">
+          <p className="font-normal text-base leading-relaxed">
             © 2023 Terapia Online para Dominicanos en el Exterior
           </p>
         </div>

@@ -1,48 +1,49 @@
 import React from "react";
 import { Button } from "../../../../components/ui/button";
+import { useIsMobile } from "../../../../lib/hooks/useIsMobile";
+import { BlurImage } from "../../../../components/ui/blur-image";
+
+// Importamos las imágenes y sus versiones de baja resolución
+import heroImage from "../../../../images/foto.png";
+import heroImageMobile from "../../../../images/foto-mobile.png";
+import heroImagePlaceholder from "../../../../images/foto-placeholder.png";
+import heroImageMobilePlaceholder from "../../../../images/foto-mobile-placeholder.png";
+
 export const HeroSection = (): JSX.Element => {
+  const isMobile = useIsMobile();
+
   return (
     <section
       id="hero-section"
       className="w-full flex justify-center items-center p-[10px]"
-      data-oid="b_5ac-g"
+      data-prefetch="AnxietyInfoSection/AnxietyInfoSection"
     >
-      <div
-        className="flex items-center bg-[#ffcbcd] rounded-[30px] overflow-hidden w-screen justify-center"
-        data-oid="0wqsj_c"
-      >
-        <div
-          className="flex flex-col p-12 space-y-8 max-w-3xl"
-          data-oid="a9bnmcx"
-        >
-          <h1
-            className="font-extrabold text-[#736f6f] text-7xl md:text-8xl leading-tight"
-            data-oid="b1bpu-q"
-          >
-            ¿PROBLEMAS DE <br data-oid="d3:lzc8" />
+      <div className="flex flex-col md:flex-row items-center bg-[#ffcbcd] rounded-[30px] overflow-hidden w-screen justify-center">
+        <div className="flex flex-col p-6 md:p-12 space-y-4 md:space-y-8 max-w-3xl">
+          <h1 className="font-extrabold text-[#736f6f] text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight text-center md:text-left">
+            ¿PROBLEMAS DE <br />
             ANSIEDAD?
           </h1>
 
-          <p
-            className="font-bold text-[#1e1e1ecf] text-xl md:text-2xl"
-            data-oid="68-umr9"
-          >
+          <p className="font-bold text-[#1e1e1ecf] text-lg sm:text-xl md:text-2xl text-center md:text-left">
             "yo estoy dispuesta a ayudarte a superar esos problemas."
           </p>
 
-          <div className="pt-4" data-oid="teknnpp">
+          <div className="pt-4 flex justify-center md:justify-start">
             <Button
               variant="default"
-              className="bg-white text-black hover:bg-gray-100 rounded-[10px] px-8 py-6 text-xl font-semibold"
-              data-oid="m7e:3t:"
+              className="bg-white text-black hover:bg-gray-100 rounded-[10px] px-4 sm:px-8 py-4 sm:py-6 text-lg sm:text-xl font-semibold"
             >
               Agenda Tu Cita
             </Button>
           </div>
         </div>
-        <div
-          className="hidden md:block w-full max-w-[430px] bg-[url(../../../../images/foto.png)] bg-cover bg-center h-[585px] bg-no-repeat"
-          data-oid=".0j1.bz"
+        
+        <BlurImage
+          src={isMobile ? heroImageMobile : heroImage}
+          placeholderSrc={isMobile ? heroImageMobilePlaceholder : heroImagePlaceholder}
+          alt="Terapeuta"
+          className={isMobile ? "w-full h-[300px] mt-4" : "w-full max-w-[430px] h-[585px]"}
         />
       </div>
     </section>
