@@ -4,7 +4,7 @@ import { Button } from "../../../../components/ui/button";
 export const NavigationSection = (): JSX.Element => {
   // Navigation items data
   const navigationItems = [
-    { id: 1, text: "Inicio", dataOid: "8nshsai" },
+    { id: 1, text: "Inicio", dataOid: "8nshsai"  },
     { id: 2, text: "Que es la ansiedad?", dataOid: "b:ldvp6" },
     { id: 3, text: "La solución", dataOid: "04m6h13" },
   ];
@@ -43,7 +43,7 @@ export const NavigationSection = (): JSX.Element => {
             key={item.id}
             variant="outline"
             className="h-[46px] w-[247px] rounded-[10px] border-b border-black bg-transparent"
-            onClick={() => scrollToSection(item.link)}
+            onClick={() => scrollToSection(item.dataOid)}
             data-oid="k7w3o_7"
           >
             <span
