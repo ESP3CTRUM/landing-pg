@@ -16,7 +16,6 @@ export const LandingPage = (): JSX.Element => {
       <HeroSection data-oid="58k64p8" />
       <AnxietyInfoSection data-oid="7j2v-re" />
       <ServicesOfferedSection data-oid="nskgfm4" />
-      
 
       <section className="w-full py-12" data-oid="gw2e7-4">
         <div className="container mx-auto" data-oid="xb6cd5q">
@@ -30,7 +29,7 @@ export const LandingPage = (): JSX.Element => {
       </section>
 
       <MainContentSection data-oid="qwp0jf0" />
-      <Terapeutas />
+      <Terapeutas data-oid="q07eikp" />
       <footer
         className="w-full py-9 bg-[#333333] text-white"
         data-oid="ebaopr9"

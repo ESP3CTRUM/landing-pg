@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useCallback, useMemo } from "react";
 import "./ProfileCard.css";
-import avatarImg from '../../../images/foto.png';
-import iconImg from '../../../images/icon2.png';
+import avatarImg from "../../../images/foto.png";
+import iconImg from "../../../images/icon2.png";
 interface ProfileCardProps {
   avatarUrl: string;
   iconUrl?: string;
