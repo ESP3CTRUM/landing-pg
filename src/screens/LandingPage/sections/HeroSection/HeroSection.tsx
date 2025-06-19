@@ -5,9 +5,9 @@ import { BlurImage } from "../../../../components/ui/blur-image";
 
 // Rutas a las imágenes
 const heroImage = "/images/foto.png";
-const heroImageMobile = "/images/foto-mobile.png";
+const heroImageMobile = "/images/foto.png"; // Temporalmente usando la misma imagen hasta tener la versión móvil
 const heroImagePlaceholder = "/images/foto-placeholder.png";
-const heroImageMobilePlaceholder = "/images/foto-mobile-placeholder.png";
+const heroImageMobilePlaceholder = "/images/foto-placeholder.png"; // Usando el mismo placeholder para ambos
 
 export const HeroSection = (): JSX.Element => {
   const isMobile = useIsMobile();
