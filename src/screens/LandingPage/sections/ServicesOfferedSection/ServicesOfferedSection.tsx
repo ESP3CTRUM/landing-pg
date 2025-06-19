@@ -12,14 +12,14 @@ export const ServicesOfferedSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex flex-col gap-[52px] px-9 py-[66px] bg-[#d0cece] w-full" id="solution-section">
-      <header className="flex items-center justify-center">
+    <section id="solution-section" className="flex flex-col gap-[52px] py-[66px] bg-[#d0cece] w-screen overflow-hidden">
+      <header className="flex items-center justify-center px-9">
         <h2 className="w-full max-w-[1036px] [font-family:'Segoe_UI_Variable-bold',Helvetica] font-normal text-[#393838] text-[80px] leading-[75px]">
           Supérala Mediante Nuestro Paquete De Terapia Contra La Ansiedad:
         </h2>
       </header>
 
-      <div className="flex justify-center w-full py-1.5">
+      <div className="flex justify-center w-full py-1.5 px-9">
         <Card className="rounded-[20px] overflow-hidden">
           <CardContent className="flex flex-col items-center gap-[50px] p-[23px]">
             <div className="w-full flex items-center justify-around">
