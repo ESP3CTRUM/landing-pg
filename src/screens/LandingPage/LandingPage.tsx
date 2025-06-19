@@ -10,34 +10,34 @@ export const LandingPage = (): JSX.Element => {
   return (
     <div
       className="flex flex-col w-full items-center bg-background"
-      data-oid="mtr39e6"
+      data-oid="9_r_995"
     >
-      <NavigationSection data-oid="m-4tlhp" />
-      <HeroSection data-oid="58k64p8" />
-      <AnxietyInfoSection data-oid="7j2v-re" />
-      <ServicesOfferedSection data-oid="nskgfm4" />
+      <NavigationSection data-oid="h3w9nt_" />
+      <HeroSection data-oid="j20:fch" />
+      <AnxietyInfoSection data-oid="-s88_n3" />
+      <ServicesOfferedSection data-oid="br0la39" />
 
-      <section className="w-full py-12" data-oid="gw2e7-4">
-        <div className="container mx-auto" data-oid="xb6cd5q">
+      <section className="w-full py-12" data-oid="d7ijzgw">
+        <div className="container mx-auto" data-oid="uw-7tn5">
           <h2
             className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center font-semibold text-[#373434] mb-12"
-            data-oid="cpb5rtu"
+            data-oid="dcwcvwa"
           >
             Opiniones De Personas Como Tú
           </h2>
         </div>
       </section>
 
-      <MainContentSection data-oid="qwp0jf0" />
-      <Terapeutas data-oid="q07eikp" />
+      <MainContentSection data-oid="1_z:x56" />
+      <Terapeutas data-oid="zwg5wiq" />
       <footer
         className="w-full py-9 bg-[#333333] text-white"
-        data-oid="ebaopr9"
+        data-oid="lce.qfr"
       >
-        <div className="container mx-auto text-center" data-oid="vk1.kcj">
+        <div className="container mx-auto text-center" data-oid="wt.rn.4">
           <p
             className="font-normal text-base leading-relaxed"
-            data-oid="4g_8ca."
+            data-oid="exzefzj"
           >
             © 2023 Terapia Online para Dominicanos en el Exterior
           </p>

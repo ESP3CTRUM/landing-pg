@@ -12,64 +12,35 @@ export const ServicesOfferedSection = (): JSX.Element => {
   ];
 
   return (
-    <section
-      className="flex flex-col gap-[52px] px-9 py-[66px] bg-[#d0cece] w-full"
-      data-oid="04m6h13"
-    >
-      <header className="flex items-center justify-center" data-oid="o0t3xfq">
-        <h2
-          className="w-full max-w-[1036px] [font-family:'Segoe_UI_Variable-bold',Helvetica] font-normal text-[#393838] text-[80px] leading-[75px]"
-          data-oid="jkymjih"
-        >
+    <section className="flex flex-col gap-[52px] px-9 py-[66px] bg-[#d0cece] w-full">
+      <header className="flex items-center justify-center">
+        <h2 className="w-full max-w-[1036px] [font-family:'Segoe_UI_Variable-bold',Helvetica] font-normal text-[#393838] text-[80px] leading-[75px]">
           Supérala Mediante Nuestro Paquete De Terapia Contra La Ansiedad:
         </h2>
       </header>
 
-      <div className="flex justify-center w-full py-1.5" data-oid="-ptb8b.">
-        <Card className="rounded-[20px] overflow-hidden" data-oid="c7jmd-d">
-          <CardContent
-            className="flex flex-col items-center gap-[50px] p-[23px]"
-            data-oid="k:f5nus"
-          >
-            <div
-              className="w-full flex items-center justify-around"
-              data-oid="h_iac5y"
-            >
-              <h3
-                className="[font-family:'Segoe_UI_Variable-SemiboldSmall',Helvetica] font-normal text-black text-6xl text-center leading-[75px] whitespace-nowrap"
-                data-oid="sp1y1st"
-              >
+      <div className="flex justify-center w-full py-1.5">
+        <Card className="rounded-[20px] overflow-hidden">
+          <CardContent className="flex flex-col items-center gap-[50px] p-[23px]">
+            <div className="w-full flex items-center justify-around">
+              <h3 className="[font-family:'Segoe_UI_Variable-SemiboldSmall',Helvetica] font-normal text-black text-6xl text-center leading-[75px] whitespace-nowrap">
                 Plan De Terapia:
               </h3>
             </div>
 
-            <div className="flex items-end justify-center" data-oid="z6syu:o">
-              <ul
-                className="w-[614px] [font-family:'Segoe_UI_Variable-Regular',Helvetica] font-normal text-black text-[22px] leading-[33px]"
-                data-oid="oeml78w"
-              >
+            <div className="flex items-end justify-center">
+              <ul className="w-[614px] [font-family:'Segoe_UI_Variable-Regular',Helvetica] font-normal text-black text-[22px] leading-[33px]">
                 {serviceDetails.map((detail, index) => (
-                  <li key={index} data-oid="2d522c9">
-                    {detail}
-                  </li>
+                  <li key={index}>{detail}</li>
                 ))}
               </ul>
             </div>
 
-            <div
-              className="flex items-center justify-center w-full px-[18px]"
-              data-oid="5b:89_j"
-            >
-              <span
-                className="[font-family:'Segoe_UI-Semibold',Helvetica] font-normal text-black text-[80px] leading-[75px] whitespace-nowrap"
-                data-oid="_bkdj-3"
-              >
+            <div className="flex items-center justify-center w-full px-[18px]">
+              <span className="[font-family:'Segoe_UI-Semibold',Helvetica] font-normal text-black text-[80px] leading-[75px] whitespace-nowrap">
                 $
               </span>
-              <span
-                className="[font-family:'Segoe_UI-Semibold',Helvetica] font-normal text-black text-[80px] leading-[75px] whitespace-nowrap"
-                data-oid="vfq6q4-"
-              >
+              <span className="[font-family:'Segoe_UI-Semibold',Helvetica] font-normal text-black text-[80px] leading-[75px] whitespace-nowrap">
                 300
               </span>
             </div>

@@ -264,13 +264,13 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
       ref={wrapRef}
       className={`pc-card-wrapper ${className}`.trim()}
       style={cardStyle}
-      data-oid="w.nn9jn"
+      data-oid="dae74u2"
     >
-      <section ref={cardRef} className="pc-card" data-oid="zw94i-4">
-        <div className="pc-inside" data-oid="v:l2i94">
-          <div className="pc-shine" data-oid="lyxi:7n" />
-          <div className="pc-glare" data-oid="jrujeuc" />
-          <div className="pc-content pc-avatar-content" data-oid="pxiy-o2">
+      <section ref={cardRef} className="pc-card" data-oid="b2hk7g3">
+        <div className="pc-inside" data-oid="2w.o_3v">
+          <div className="pc-shine" data-oid="wno8gxd" />
+          <div className="pc-glare" data-oid="-qa0dos" />
+          <div className="pc-content pc-avatar-content" data-oid="q87fh-9">
             <img
               className="avatar"
               src={avatarUrl}
@@ -280,13 +280,13 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                 const target = e.target as HTMLImageElement;
                 target.style.display = "none";
               }}
-              data-oid="tbi.ql9"
+              data-oid="v1:rnpf"
             />
 
             {showUserInfo && (
-              <div className="pc-user-info" data-oid="2b--59a">
-                <div className="pc-user-details" data-oid="ql7vaf4">
-                  <div className="pc-mini-avatar" data-oid="bby:o_e">
+              <div className="pc-user-info" data-oid="b7ip34r">
+                <div className="pc-user-details" data-oid="kvafrh:">
+                  <div className="pc-mini-avatar" data-oid="_i40..f">
                     <img
                       src={miniAvatarUrl || avatarUrl}
                       alt={`${name || "User"} mini avatar`}
@@ -296,14 +296,14 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                         target.style.opacity = "0.5";
                         target.src = avatarUrl;
                       }}
-                      data-oid="ddmdj7g"
+                      data-oid="uy0g2gn"
                     />
                   </div>
-                  <div className="pc-user-text" data-oid="k68021_">
-                    <div className="pc-handle" data-oid="4ke3.2-">
+                  <div className="pc-user-text" data-oid=":fsge4:">
+                    <div className="pc-handle" data-oid="nuuxunq">
                       @{handle}
                     </div>
-                    <div className="pc-status" data-oid="ug5xyfc">
+                    <div className="pc-status" data-oid="c7u5p:b">
                       {status}
                     </div>
                   </div>
@@ -314,17 +314,17 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                   style={{ pointerEvents: "auto" }}
                   type="button"
                   aria-label={`Contact ${name || "user"}`}
-                  data-oid="6226oj4"
+                  data-oid="rr3hb6i"
                 >
                   {contactText}
                 </button>
               </div>
             )}
           </div>
-          <div className="pc-content" data-oid="322.lnt">
-            <div className="pc-details" data-oid="plecfiz">
-              <h3 data-oid="u-g6m67">{name}</h3>
-              <p data-oid="-q.wv:.">{title}</p>
+          <div className="pc-content" data-oid="9i8628m">
+            <div className="pc-details" data-oid="fp-3mz8">
+              <h3 data-oid="-p-ehra">{name}</h3>
+              <p data-oid="paugjen">{title}</p>
             </div>
           </div>
         </div>

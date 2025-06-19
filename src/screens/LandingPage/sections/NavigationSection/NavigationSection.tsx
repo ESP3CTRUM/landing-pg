@@ -33,7 +33,7 @@ export const NavigationSection = (): JSX.Element => {
           data-oid="y0tqzj3"
         />
       </div>
-
+      
       <nav
         className="flex items-center justify-center gap-4"
         data-oid="iohlc0o"
@@ -54,7 +54,7 @@ export const NavigationSection = (): JSX.Element => {
             </span>
           </Button>
         ))}
-      </nav>
+    </nav>
     </header>
   );
 };

@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  vite-app:
+    build: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/project
+    working_dir: /project
+    command: sh -c "npm run dev -- --host 0.0.0.0 && tail -f /dev/null"
