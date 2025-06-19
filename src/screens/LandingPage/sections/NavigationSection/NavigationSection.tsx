@@ -4,15 +4,13 @@ import { Button } from "../../../../components/ui/button";
 export const NavigationSection = (): JSX.Element => {
   // Navigation items data
   const navigationItems = [
-    { id: 1, text: "Inicio", link: "#HeroSection" },
-    { id: 2, text: "Que es la ansiedad?", link: "#AnxietyInfoSection" },
-    { id: 3, text: "La solución", link: "#ServicesOfferedSection" },
+    { id: 1, text: "Inicio", dataOid: "8nshsai" },
+    { id: 2, text: "Que es la ansiedad?", dataOid: "b:ldvp6" },
+    { id: 3, text: "La solución", dataOid: "04m6h13" },
   ];
 
-  const scrollToSection = (sectionId: string) => {
-    // Removemos el # del inicio del id
-    const targetId = sectionId.replace("#", "");
-    const element = document.getElementById(targetId);
+  const scrollToSection = (dataOid: string) => {
+    const element = document.querySelector(`[data-oid="${dataOid}"]`);
 
     if (element) {
       element.scrollIntoView({
