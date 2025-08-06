@@ -21,37 +21,64 @@ export const NavigationSection = (): JSX.Element => {
   const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - 88; // Ajustado por la altura del header
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset - 88; // Ajustado por la altura del header
 
       // Aplicar animación personalizada
       const startPosition = window.pageYOffset;
       const distance = elementPosition - startPosition;
       const duration = 600;
-      
+
       const easeInOutQuad = (t: number): number => {
         return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
       };
-      
+
       const startTime = performance.now();
-      
+
       const animate = (currentTime: number) => {
         const elapsedTime = currentTime - startTime;
         const progress = Math.min(elapsedTime / duration, 1);
-        
+
         window.scrollTo(0, startPosition + distance * easeInOutQuad(progress));
-        
+
         if (progress < 1) {
           requestAnimationFrame(animate);
         }
       };
-      
+
       requestAnimationFrame(animate);
-      
+
       if (isMobile) {
         setIsMenuOpen(false);
       }
     }
   };
+
+  const menuRef = React.useRef<HTMLDivElement>(null);
+  const buttonRef = React.useRef<HTMLButtonElement>(null);
+
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="flex w-full h-[88px] items-center justify-between px-6 py-5 border-b border-solid border-black bg-[#FFFFFF1a] backdrop-blur-[2px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(2px)_brightness(100%)] sticky top-0 z-50">
@@ -62,10 +89,11 @@ export const NavigationSection = (): JSX.Element => {
           src="/images/svg-logo.svg"
         />
       </div>
-      
+
       {isMobile ? (
         <>
           <button
+            ref={buttonRef}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="p-2 text-gray-600 hover:text-gray-900"
             aria-label="Toggle menu"
@@ -89,7 +117,10 @@ export const NavigationSection = (): JSX.Element => {
 
           {/* Menú móvil */}
           {isMenuOpen && (
-            <div className="absolute top-[88px] left-0 right-0 bg-white border-b border-gray-200 py-4 px-6 shadow-lg">
+            <div
+              ref={menuRef}
+              className="absolute top-[88px] left-0 right-0 bg-white border-b border-gray-200 py-4 px-6 shadow-lg"
+            >
               <nav className="flex flex-col space-y-4">
                 {navigationItems.map((item) => (
                   <button

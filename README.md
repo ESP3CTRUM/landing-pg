@@ -23,9 +23,33 @@ npm run dev
 After a few seconds, your project should be accessible at the address
 [http://localhost:5173/](http://localhost:5173/)
 
-
 If you are satisfied with the result, you can finally build the project for release with:
 
 ```
 npm run build
 ```
+
+## Running with Docker
+
+You can also build and run this project using Docker. The provided Docker setup uses Node.js version 22.13.1 and serves the built static files using the `serve` package.
+
+### Build and Run
+
+To build and start the application using Docker Compose, run:
+
+```
+docker compose up --build
+```
+
+This will build the Docker image and start the service defined in `docker-compose.yml`.
+
+- The application will be available at [http://localhost:5173/](http://localhost:5173/)
+- The container exposes port **5173**
+
+### Configuration
+
+- No environment variables are required by default.
+- No external dependencies or volumes are needed for this setup.
+- The Dockerfile uses a multi-stage build for optimized image size and security (non-root user).
+
+> **Note:** If you need to customize environment variables, you can uncomment and use the `env_file` section in `docker-compose.yml`.

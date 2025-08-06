@@ -4,10 +4,10 @@ import { useIsMobile } from "../../../../lib/hooks/useIsMobile";
 import { BlurImage } from "../../../../components/ui/blur-image";
 
 // Rutas a las imágenes
-const heroImage = "/images/foto.png";
-const heroImageMobile = "/images/foto.png"; // Temporalmente usando la misma imagen hasta tener la versión móvil
-const heroImagePlaceholder = "/images/foto-placeholder.png";
-const heroImageMobilePlaceholder = "/images/foto-placeholder.png"; // Usando el mismo placeholder para ambos
+const heroImage = "/images/ansiedad2.webp"; // foto d ma, cambiar por una ilustracion
+const heroImageMobile = "/images/ansiedad2.webp"; // Temporalmente usando la misma imagen hasta tener la versión móvil
+const heroImagePlaceholder = "/images/ansiedad2-loader.webp";
+const heroImageMobilePlaceholder = "/images/ansiedad2-loader.webp"; // Usando el mismo placeholder para ambos
 
 export const HeroSection = (): JSX.Element => {
   const isMobile = useIsMobile();
@@ -38,12 +38,18 @@ export const HeroSection = (): JSX.Element => {
             </Button>
           </div>
         </div>
-        
+
         <BlurImage
           src={isMobile ? heroImageMobile : heroImage}
-          placeholderSrc={isMobile ? heroImageMobilePlaceholder : heroImagePlaceholder}
+          placeholderSrc={
+            isMobile ? heroImageMobilePlaceholder : heroImagePlaceholder
+          }
           alt="Terapeuta"
-          className={isMobile ? "w-full h-[300px] mt-4" : "w-full max-w-[430px] h-[585px]"}
+          className={
+            isMobile
+              ? "w-full h-[300px] mt-4"
+              : "w-full max-w-[430px] h-[585px]"
+          }
         />
       </div>
     </section>

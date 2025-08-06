@@ -12,9 +12,12 @@ export const ServicesOfferedSection = (): JSX.Element => {
   ];
 
   return (
-    <section id="solution-section" className="flex flex-col gap-[52px] py-[66px] bg-[#d0cece] w-screen overflow-hidden">
+    <section
+      id="solution-section"
+      className="flex flex-col gap-[52px] py-[66px] bg-[#d0cece] w-screen overflow-hidden"
+    >
       <header className="flex items-center justify-center px-9">
-        <h2 className="w-full max-w-[1036px] [font-family:'Segoe_UI_Variable-bold',Helvetica] font-normal text-[#393838] text-[80px] leading-[75px]">
+        <h2 className="w-full max-w-[1036px] [font-family:'Segoe_UI_Variable-bold',Helvetica] font-normal text-[#393838] text-[50px]">
           Supérala Mediante Nuestro Paquete De Terapia Contra La Ansiedad:
         </h2>
       </header>

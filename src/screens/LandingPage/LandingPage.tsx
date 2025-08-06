@@ -7,22 +7,22 @@ import { usePrefetch } from "../../lib/hooks/usePrefetch";
 const AnxietyInfoSection = React.lazy(() =>
   import("./sections/AnxietyInfoSection/AnxietyInfoSection").then((module) => ({
     default: module.AnxietyInfoSection,
-  }))
+  })),
 );
 const MainContentSection = React.lazy(() =>
   import("./sections/MainContentSection/MainContentSection").then((module) => ({
     default: module.MainContentSection,
-  }))
+  })),
 );
 const ServicesOfferedSection = React.lazy(() =>
   import("./sections/ServicesOfferedSection").then((module) => ({
     default: module.ServicesOfferedSection,
-  }))
+  })),
 );
 const Terapeutas = React.lazy(() =>
   import("./sections/Terapeutas/Terapeutas").then((module) => ({
     default: module.Terapeutas,
-  }))
+  })),
 );
 
 // Componente de carga
@@ -55,7 +55,7 @@ export const LandingPage = (): JSX.Element => {
 
       <section className="w-full py-12">
         <div className="container mx-auto">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center font-semibold text-[#373434] mb-12">
+          <h2 className="md:text-6xl lg:text-7xl xl:text-5xl text-center font-semibold text-[#373434] mb-12 text-[60px]">
             Opiniones De Personas Como Tú
           </h2>
         </div>

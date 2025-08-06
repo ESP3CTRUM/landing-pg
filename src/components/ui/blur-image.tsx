@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface BlurImageProps {
   src: string;
@@ -12,8 +12,8 @@ export const BlurImage: React.FC<BlurImageProps> = ({
   src,
   placeholderSrc,
   alt,
-  className = '',
-  onLoad
+  className = "",
+  onLoad,
 }) => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -24,9 +24,9 @@ export const BlurImage: React.FC<BlurImageProps> = ({
         src={placeholderSrc}
         alt={alt}
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
-          isLoading ? 'opacity-100' : 'opacity-0'
+          isLoading ? "opacity-100" : "opacity-0"
         }`}
-        style={{ filter: 'blur(10px)' }}
+        style={{ filter: "blur(10px)" }}
       />
 
       {/* Imagen principal */}
@@ -35,7 +35,7 @@ export const BlurImage: React.FC<BlurImageProps> = ({
         alt={alt}
         loading="lazy"
         className={`w-full h-full object-cover transition-opacity duration-300 ${
-          isLoading ? 'opacity-0' : 'opacity-100'
+          isLoading ? "opacity-0" : "opacity-100"
         }`}
         onLoad={() => {
           setIsLoading(false);

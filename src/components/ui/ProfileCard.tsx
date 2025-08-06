@@ -264,13 +264,12 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
       ref={wrapRef}
       className={`pc-card-wrapper ${className}`.trim()}
       style={cardStyle}
-      data-oid="dae74u2"
     >
-      <section ref={cardRef} className="pc-card" data-oid="b2hk7g3">
-        <div className="pc-inside" data-oid="2w.o_3v">
-          <div className="pc-shine" data-oid="wno8gxd" />
-          <div className="pc-glare" data-oid="-qa0dos" />
-          <div className="pc-content pc-avatar-content" data-oid="q87fh-9">
+      <section ref={cardRef} className="pc-card">
+        <div className="pc-inside">
+          <div className="pc-shine" />
+          <div className="pc-glare" />
+          <div className="pc-content pc-avatar-content">
             <img
               className="avatar"
               src={avatarUrl}
@@ -280,13 +279,12 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                 const target = e.target as HTMLImageElement;
                 target.style.display = "none";
               }}
-              data-oid="v1:rnpf"
             />
 
             {showUserInfo && (
-              <div className="pc-user-info" data-oid="b7ip34r">
-                <div className="pc-user-details" data-oid="kvafrh:">
-                  <div className="pc-mini-avatar" data-oid="_i40..f">
+              <div className="pc-user-info">
+                <div className="pc-user-details">
+                  <div className="pc-mini-avatar">
                     <img
                       src={miniAvatarUrl || avatarUrl}
                       alt={`${name || "User"} mini avatar`}
@@ -296,16 +294,11 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                         target.style.opacity = "0.5";
                         target.src = avatarUrl;
                       }}
-                      data-oid="uy0g2gn"
                     />
                   </div>
-                  <div className="pc-user-text" data-oid=":fsge4:">
-                    <div className="pc-handle" data-oid="nuuxunq">
-                      @{handle}
-                    </div>
-                    <div className="pc-status" data-oid="c7u5p:b">
-                      {status}
-                    </div>
+                  <div className="pc-user-text">
+                    <div className="pc-handle">@{handle}</div>
+                    <div className="pc-status">{status}</div>
                   </div>
                 </div>
                 <button
@@ -314,17 +307,16 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                   style={{ pointerEvents: "auto" }}
                   type="button"
                   aria-label={`Contact ${name || "user"}`}
-                  data-oid="rr3hb6i"
                 >
                   {contactText}
                 </button>
               </div>
             )}
           </div>
-          <div className="pc-content" data-oid="9i8628m">
-            <div className="pc-details" data-oid="fp-3mz8">
-              <h3 data-oid="-p-ehra">{name}</h3>
-              <p data-oid="paugjen">{title}</p>
+          <div className="pc-content">
+            <div className="pc-details">
+              <h3>{name}</h3>
+              <p>{title}</p>
             </div>
           </div>
         </div>

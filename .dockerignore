@@ -1,5 +1,69 @@
-node_modules
-.git
-.env.local
-dist
+# Node.js dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+
+# Version control
+.git/
+.gitignore
+
+# IDE/editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs and debug files
 *.log
+npm-debug.log
+yarn-debug.log
+
+# Temporary files and folders
+tmp/
+temp/
+*.tmp
+
+# Environment and secrets
+.env*
+*.env
+*.pem
+*.key
+*.crt
+config.local.*
+*.local.yml
+
+# Documentation
+README*
+*.md
+docs/
+
+# Test and coverage artifacts
+test/
+tests/
+coverage/
+
+# Project-specific
+.bolt/
+
+# Docker files (do NOT ignore Dockerfile or docker-compose.yml)
+# (Intentionally not ignoring dockerfile and docker-compose.yml)
+
+# Public images (if not needed in build context)
+public/images/
+
+# Ignore empty images directory
+images/
+
+# Ignore other VCS
+.svn/
+.hg/
+
+# Ignore miscellaneous
+*.DS_Store
+Thumbs.db
+
+# Exclude lock files from ignore (explicitly allowed)
+!*.lock
