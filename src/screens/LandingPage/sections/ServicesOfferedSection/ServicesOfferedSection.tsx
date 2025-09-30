@@ -2,14 +2,20 @@ import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 export const ServicesOfferedSection = (): JSX.Element => {
-  // Service details data
-  const serviceDetails = [
-    "6 Sesiones De Terapia Individual",
-    "Evaluación De Niveles De Ansiedad",
-    "Guía De Técnicas De Manejo Del Estrés",
-    "1 Sesión De Emergencia Disponible",
-    "Contenido Exclusivo Sobre Manejo De Ansiedad",
-  ];
+  // Define the therapy plan data to avoid repetition
+  const therapyPlanData = {
+    title: "Plan De Terapia:",
+    services: [
+      "6 Sesiones De Terapia Individual",
+      "Evaluación De Niveles De Ansiedad",
+      "Guía De Técnicas De Manejo Del Estrés",
+      "1 Sesión De Emergencia Disponible",
+      "Contenido Exclusivo Sobre Manejo De Ansiedad",
+    ],
+
+    price: 300,
+  };
+
 
   return (
     <section
@@ -23,32 +29,20 @@ export const ServicesOfferedSection = (): JSX.Element => {
       </header>
 
       <div className="flex justify-center w-full py-1.5 px-9">
-        <Card className="rounded-[20px] overflow-hidden">
-          <CardContent className="flex flex-col items-center gap-[50px] p-[23px]">
-            <div className="w-full flex items-center justify-around">
-              <h3 className="[font-family:'Segoe_UI_Variable-SemiboldSmall',Helvetica] font-normal text-black text-6xl text-center leading-[75px] whitespace-nowrap">
-                Plan De Terapia:
-              </h3>
-            </div>
-
-            <div className="flex items-end justify-center">
-              <ul className="w-[614px] [font-family:'Segoe_UI_Variable-Regular',Helvetica] font-normal text-black text-[22px] leading-[33px]">
-                {serviceDetails.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex items-center justify-center w-full px-[18px]">
-              <span className="[font-family:'Segoe_UI-Semibold',Helvetica] font-normal text-black text-[80px] leading-[75px] whitespace-nowrap">
-                $
-              </span>
-              <span className="[font-family:'Segoe_UI-Semibold',Helvetica] font-normal text-black text-[80px] leading-[75px] whitespace-nowrap">
-                300
-              </span>
-            </div>
-          </CardContent>
-        </Card>
+        <Card className="max-w-sm w-full bg-[#ffffff]">
+                  <div className="p-6 flex flex-col h-full justify-between">
+                    <h3 className="text-2xl font-bold mb-4 text-center">{therapyPlanData.title}</h3>
+                    <ul className="mb-4 list-disc list-inside text-base text-gray-700">
+                      {therapyPlanData.services.map((service, idx) => (
+                        <li key={idx}>{service}</li>
+                      ))}
+                    </ul>
+                    <div className="text-center mt-auto">
+                      <span className="text-3xl font-extrabold text-primary">${therapyPlanData.price}</span>
+                      <span className="ml-2 text-base text-gray-500">USD</span>
+                    </div>
+                  </div>
+                </Card>
       </div>
     </section>
   );

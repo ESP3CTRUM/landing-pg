@@ -9,9 +9,9 @@ const AnxietyInfoSection = React.lazy(() =>
     default: module.AnxietyInfoSection,
   })),
 );
-const MainContentSection = React.lazy(() =>
-  import("./sections/MainContentSection/MainContentSection").then((module) => ({
-    default: module.MainContentSection,
+const OpinionSection = React.lazy(() =>
+  import("./sections/MainContentSection/OpinionSection").then((module) => ({
+    default: module.OpinionSection,
   })),
 );
 const ServicesOfferedSection = React.lazy(() =>
@@ -48,22 +48,22 @@ export const LandingPage = (): JSX.Element => {
       </Suspense>
 
       <Suspense fallback={<LoadingFallback />}>
-        <div data-prefetch="MainContentSection/MainContentSection">
+        <div data-prefetch="MainContentSection/OpinionSection">
           <ServicesOfferedSection />
         </div>
       </Suspense>
 
       <section className="w-full py-12">
         <div className="container mx-auto">
-          <h2 className="md:text-6xl lg:text-7xl xl:text-5xl text-center font-semibold text-[#373434] mb-12 text-[60px]">
-            Opiniones De Personas Como Tú
+          <h2 className="md:text-6xl lg:text-7xl xl:text-5xl text-center font-semibold text-[#373434] mb-0 text-[60px]">
+            Opiniones De Personas Como Tú:
           </h2>
         </div>
       </section>
 
       <Suspense fallback={<LoadingFallback />}>
         <div data-prefetch="Terapeutas/Terapeutas">
-          <MainContentSection />
+          <OpinionSection/>
         </div>
       </Suspense>
 
@@ -74,7 +74,7 @@ export const LandingPage = (): JSX.Element => {
       <footer className="w-full py-9 bg-[#333333] text-white">
         <div className="container mx-auto text-center">
           <p className="font-normal text-base leading-relaxed">
-            © 2023 Terapia Online para Dominicanos en el Exterior
+            © 2025 Maria C. Psicóloga. Todos los derechos reservados.
           </p>
         </div>
       </footer>

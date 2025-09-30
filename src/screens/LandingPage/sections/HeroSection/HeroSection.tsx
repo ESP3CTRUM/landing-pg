@@ -48,7 +48,7 @@ export const HeroSection = (): JSX.Element => {
           className={
             isMobile
               ? "w-full h-[300px] mt-4"
-              : "w-full max-w-[430px] h-[585px]"
+              : "w-full max-w-[480px] h-[585px]"
           }
         />
       </div>
